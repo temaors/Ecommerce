@@ -4,14 +4,14 @@
     "/Users/temaors/Documents/EC/eCommerce/eCommerce/eCommerce.csproj": {}
   },
   "projects": {
-    "/Users/temaors/Documents/EC/eCommerce/eCommerce/eCommerce.csproj": {
+    "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/temaors/Documents/EC/eCommerce/eCommerce/eCommerce.csproj",
-        "projectName": "eCommerce",
-        "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce/eCommerce.csproj",
+        "projectUniqueName": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj",
+        "projectName": "eCommerce.Database",
+        "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj",
         "packagesPath": "/Users/temaors/.nuget/packages/",
-        "outputPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce/obj/",
+        "outputPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/temaors/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,108 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/temaors/Documents/EC/eCommerce/eCommerce/eCommerce.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/temaors/Documents/EC/eCommerce/eCommerce/eCommerce.csproj",
+        "projectName": "eCommerce",
+        "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce/eCommerce.csproj",
+        "packagesPath": "/Users/temaors/.nuget/packages/",
+        "outputPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/temaors/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj": {
+                "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

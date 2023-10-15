@@ -1,0 +1,14 @@
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.deps.json
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.runtimeconfig.json
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.pdb
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.csproj.AssemblyReference.cache
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.GeneratedMSBuildEditorConfig.editorconfig
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.AssemblyInfoInputs.cache
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.AssemblyInfo.cs
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.csproj.CoreCompileInputs.cache
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/refint/eCommerce.Database.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.pdb
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.genruntimeconfig.cache
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/ref/eCommerce.Database.dll
