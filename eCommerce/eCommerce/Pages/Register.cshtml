@@ -1,0 +1,15 @@
+@model eCommerce.Database.DbEntities.User
+<h2>title</h2>
+
+<form asp-controller="Register" asp-action="User">
+    <div>
+        <label asp-for="Email" class="label-contact-info">Email:</label>
+        <input type="email" asp-for="Email" class="form-control" required maxlength="25"/>
+        <span asp-validation-for="Pass" class="validation"></span>
+    </div>
+    <div>
+        <label asp-for="Password" class="label-contact-info">Password:</label>
+        <input type="password" asp-for="Password" class="form-control" required maxlength="25"/>
+        <span asp-validation-for="Pass" class="validation"></span>
+    </div>
+</form>

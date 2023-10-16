@@ -1,11 +1,18 @@
+using eCommerce.APIObjects;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eCommerce.Controllers;
-
-public class RegisterController : Controller
+namespace eCommerce.Controllers
 {
-    public IActionResult Register()
+    [Route("registration")]
+    public class RegisterController : ControllerBase
     {
-        return Ok();
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult Register(RegisterCreditionals creditionals)
+        {
+            
+            return BadRequest();
+        }
+        
     }
 }

@@ -15,3 +15,11 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /Users/temaors/Documents/EC/eCommerce/eCommerce
 build_property._RazorSourceGeneratorDebug = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

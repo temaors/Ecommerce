@@ -1,29 +1,55 @@
 using eCommerce.Database;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddDbContext<ECommerceDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "ToDo API",
+        Description = "An ASP.NET Core Web API for managing ToDo items",
+        TermsOfService = new Uri("https://example.com/terms"),
+        Contact = new OpenApiContact
+        {
+            Name = "Example Contact",
+            Url = new Uri("https://example.com/contact")
+        },
+        License = new OpenApiLicense
+        {
+            Name = "Example License",
+            Url = new Uri("https://example.com/license")
+        }
+    });
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+// if (!app.Environment.IsDevelopment())
+// {
+//     app.UseExceptionHandler("/Error");
+//     app.UseHsts();
+// }
+
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+// app.UseHttpsRedirection();
+// app.UseStaticFiles();
 
-app.UseAuthorization();
-
-app.MapGet("/hi", () => "Hello!");
+//app.UseAuthorization();
 
 app.MapDefaultControllerRoute();
 app.MapRazorPages();

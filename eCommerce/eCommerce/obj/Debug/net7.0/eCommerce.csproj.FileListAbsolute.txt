@@ -37,3 +37,10 @@
 /Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/System.CodeDom.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/eCommerce.MvcApplicationPartsAssemblyInfo.cs
+/Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/eCommerce.RazorAssemblyInfo.cache
+/Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/eCommerce.RazorAssemblyInfo.cs
+/Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
