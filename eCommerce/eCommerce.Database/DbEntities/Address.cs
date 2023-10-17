@@ -1,6 +1,5 @@
 namespace eCommerce.Database.DbEntities
 {
-
     public class Address
     {
         public int Id { get; set; }
