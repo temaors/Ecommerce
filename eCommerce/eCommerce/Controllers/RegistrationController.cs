@@ -4,15 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eCommerce.Controllers
 {
-    [Route("registration")]
-    public class RegisterController : ControllerBase
+    public class RegistrationController : ControllerBase
     {
         private readonly CredentialsValidator<Credentials> _validator;
-        public RegisterController()
+        public RegistrationController()
         {
             _validator = new CredentialsValidator<Credentials>();
         }
         
+        [Route("register")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Register(Credentials credentials)
@@ -23,7 +23,8 @@ namespace eCommerce.Controllers
             }
             return BadRequest();
         }
-
+        
+        [Route("login")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult LogIn(Credentials credentials)
