@@ -1,33 +1,30 @@
+using eCommerce;
 using eCommerce.Database;
+using eCommerce.Database.DbEntities;
+using eCommerce.Database.Repositories;
+using eCommerce.Database.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ECommerceDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddTransient<IRepository<User>, UserRepository>();
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Version = "v1",
-        Title = "eCommerce API",
-        Description = "Intelligence Marketplace",
-    });
-});
+builder.ConfigureServices();
+
 
 var app = builder.Build();
 
-// if (!app.Environment.IsDevelopment())
-// {
-//     app.UseExceptionHandler("/Error");
-//     app.UseHsts();
-// }
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
 
 if (app.Environment.IsDevelopment())
 {

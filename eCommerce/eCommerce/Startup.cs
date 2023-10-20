@@ -1,34 +1,31 @@
+using eCommerce.Database.DbEntities;
+using eCommerce.Database.Repositories;
 using Microsoft.OpenApi.Models;
 
 namespace eCommerce
 {
-    public class Startup
+    public static class Startup
     {
-        public void ConfigureServices(IServiceCollection services)
+        public static void ConfigureServices(this WebApplicationBuilder builder)
         {
-            services.AddSwaggerGen(options =>
+            builder.ConfigureSwagger();
+            //builder.ConfigureRepositories();
+        }
+
+        private static void ConfigureSwagger(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "ToDo API",
-                    Description = "An ASP.NET Core Web API for managing ToDo items",
-                    TermsOfService = new Uri("https://example.com/terms"),
-                    Contact = new OpenApiContact
-                    {
-                        Name = "Example Contact",
-                        Url = new Uri("https://example.com/contact")
-                    },
-                    License = new OpenApiLicense
-                    {
-                        Name = "Example License",
-                        Url = new Uri("https://example.com/license")
-                    }
+                    Title = "eCommerce API",
+                    Description = "Intelligence Marketplace",
                 });
             });
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
+        public static void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseMvcWithDefaultRoute();
 
@@ -37,6 +34,11 @@ namespace eCommerce
 
             // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
             app.UseSwaggerUI();
+        }
+
+        private static void ConfigureRepositories(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddScoped(typeof(IRepository<User>), typeof(Repository<User>));
         }
     }
 }
