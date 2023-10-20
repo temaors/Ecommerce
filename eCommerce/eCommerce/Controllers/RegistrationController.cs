@@ -1,7 +1,4 @@
-using System.ComponentModel.DataAnnotations;
 using eCommerce.APIObjects;
-using eCommerce.Database.DbEntities;
-using eCommerce.Database.Repositories;
 using eCommerce.Database.UnitOfWork;
 using eCommerce.Validators;
 using Microsoft.AspNetCore.Mvc;
@@ -39,7 +36,7 @@ namespace eCommerce.Controllers
         [Route("login")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult LogIn(Credentials credentials)
+        public async Task<IActionResult> LogIn(Credentials credentials)
         {
             return Ok();
         }
