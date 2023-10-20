@@ -5,7 +5,7 @@ namespace eCommerce.Database.Repositories;
 
 public class SubcategoryRepository : Repository<SubCategory>
 {
-    public SubcategoryRepository(DbContext context) : base(context)
+    public SubcategoryRepository(ECommerceDbContext context) : base(context)
     {
     }
 }

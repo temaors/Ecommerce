@@ -1,9 +1,7 @@
-using eCommerce.Database.DbEntities;
 using eCommerce.Database.Repositories;
 
 namespace eCommerce.Database.UnitOfWork
 {
-
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ECommerceDbContext _context;

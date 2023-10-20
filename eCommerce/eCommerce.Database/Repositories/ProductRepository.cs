@@ -5,7 +5,7 @@ namespace eCommerce.Database.Repositories;
 
 public class ProductRepository : Repository<Product>
 {
-    public ProductRepository(DbContext context) : base(context)
+    public ProductRepository(ECommerceDbContext context) : base(context)
     {
     }
 }

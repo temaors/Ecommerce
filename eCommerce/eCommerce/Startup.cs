@@ -38,7 +38,7 @@ namespace eCommerce
 
         private static void ConfigureRepositories(this WebApplicationBuilder builder)
         {
-            builder.Services.AddScoped(typeof(IRepository<User>), typeof(Repository<User>));
+            //builder.Services.AddScoped(typeof(IRepository<User>), typeof(Repository<User>));
         }
     }
 }
