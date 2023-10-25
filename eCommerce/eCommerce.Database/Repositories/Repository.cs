@@ -21,6 +21,9 @@ public abstract class Repository<TEntity> : IRepository<TEntity>
             return _set.AsNoTracking();
         }
 
+        public async Task<TEntity?> FindBy(Func<TEntity, bool> predicate) => 
+            await Task.Run(() => _set.FirstOrDefault(predicate));
+        
         public async Task<TEntity> GetById(int id)
         {
             if (id <= 0)

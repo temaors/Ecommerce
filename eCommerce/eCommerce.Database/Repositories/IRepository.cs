@@ -5,6 +5,8 @@ namespace eCommerce.Database.Repositories
     {
         IQueryable<TEntity> GetAll();
 
+        Task<TEntity?> FindBy(Func<TEntity, bool> entity);
+
         Task<TEntity> GetById(int id);
 
         Task<TEntity> Create(TEntity entity);

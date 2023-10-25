@@ -1,4 +1,5 @@
 using eCommerce.APIObjects;
+using eCommerce.Database.DbEntities;
 using eCommerce.Database.UnitOfWork;
 using eCommerce.Validators;
 using Microsoft.AspNetCore.Mvc;
@@ -36,9 +37,9 @@ namespace eCommerce.Controllers
         [Route("login")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> LogIn(Credentials credentials)
-        {
-            return Ok();
-        }
+        public async Task<IActionResult> LogIn(Credentials credentials) =>
+            Ok(await _unitOfWork.Users.FindBy(p =>
+                p.Email == credentials.Email &&
+                p.Password == credentials.Password));
     }
 }

@@ -27,4 +27,9 @@ public class ProductsController : ControllerBase
         _unitOfWork.Products.GetAll();
         return Ok();
     }
+
+    public async Task<IActionResult> ViewCategory()
+    {
+        return Ok();
+    }
 }
