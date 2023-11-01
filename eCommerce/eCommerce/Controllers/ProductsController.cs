@@ -14,13 +14,13 @@ public class ProductsController : ControllerBase
         _unitOfWork = unitOfWork;
     }
 
-    [Route("view")]
+    [Route("viewProducts")]
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetProducts() =>
         Ok(_unitOfWork.Products.GetAll());
 
-    [Route("add")]
+    [Route("addProduct")]
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> CreateProduct(ProductInfo productInfo)
@@ -35,6 +35,13 @@ public class ProductsController : ControllerBase
             SubCategoryId = productInfo.SubcategoryId
         };
         await _unitOfWork.Products.Create(product);
+        return Ok();
+    }
+
+    [Route("deleteProduct")]
+    [HttpDelete]
+    public async Task<IActionResult> DeleteProduct()
+    {
         return Ok();
     }
 }

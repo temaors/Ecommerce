@@ -5,8 +5,8 @@ namespace eCommerce.Validators
 {
     public class CredentialsValidator<T> : BaseValidator<T>
     {
-        private static readonly Regex PasswordRegex = new("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$");
-        
+        private readonly Regex _passwordRegex = new("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$");
+        private readonly Regex _emailRegex = new("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$");
         public bool IsValid(Credentials credentials)
         {
             if (!EnsureNotNull(credentials)) return false;
@@ -18,16 +18,9 @@ namespace eCommerce.Validators
             !string.IsNullOrWhiteSpace(credentials.Password);
         
         private bool ValidatePassword(string password) =>
-            PasswordRegex.IsMatch(password);
+            _passwordRegex.IsMatch(password);
 
-        private bool ValidateLogin(string email)
-        {
-            if (!string.IsNullOrEmpty(email))
-            {
-                return true;
-            }
-
-            return false;
-        }
+        private bool ValidateLogin(string email) =>
+            _emailRegex.IsMatch(email);
     }
 }
