@@ -32,14 +32,9 @@ public class ProductsController : ControllerBase
             Description = productInfo.Description,
             Price = productInfo.Price,
             UnitId = productInfo.UnitId,
-            
+            SubCategoryId = productInfo.SubcategoryId
         };
-        //productInfo => Product
-        return Ok();
-    }
-    [Route("viewCategory")]
-    public async Task<IActionResult> ViewCategory()
-    {
+        await _unitOfWork.Products.Create(product);
         return Ok();
     }
 }
