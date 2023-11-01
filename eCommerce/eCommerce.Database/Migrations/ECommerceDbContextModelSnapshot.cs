@@ -79,7 +79,15 @@ namespace eCommerce.Database.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("double precision");
 
+                    b.Property<int>("SubCategoryId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UnitId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("SubCategoryId");
 
                     b.ToTable("Products");
                 });
@@ -92,7 +100,7 @@ namespace eCommerce.Database.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CategoryId")
+                    b.Property<int>("CategoryId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
@@ -140,11 +148,24 @@ namespace eCommerce.Database.Migrations
                         .HasForeignKey("ProductId");
                 });
 
+            modelBuilder.Entity("eCommerce.Database.DbEntities.Product", b =>
+                {
+                    b.HasOne("eCommerce.Database.DbEntities.SubCategory", "SubCategory")
+                        .WithMany("Products")
+                        .HasForeignKey("SubCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SubCategory");
+                });
+
             modelBuilder.Entity("eCommerce.Database.DbEntities.SubCategory", b =>
                 {
                     b.HasOne("eCommerce.Database.DbEntities.Category", null)
                         .WithMany("SubCategories")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("eCommerce.Database.DbEntities.Category", b =>
@@ -155,6 +176,11 @@ namespace eCommerce.Database.Migrations
             modelBuilder.Entity("eCommerce.Database.DbEntities.Product", b =>
                 {
                     b.Navigation("FeedBacks");
+                });
+
+            modelBuilder.Entity("eCommerce.Database.DbEntities.SubCategory", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,3 +1,4 @@
+using eCommerce.Database.DbEntities;
 using eCommerce.Database.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using ProductInfo = eCommerce.APIObjects.ProductInfo;
@@ -24,10 +25,19 @@ public class ProductsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> CreateProduct(ProductInfo productInfo)
     {
-        _unitOfWork.Products.GetAll();
+        //_unitOfWork.Products.GetAll();
+        Product product = new Product()
+        {
+            Name = productInfo.Name,
+            Description = productInfo.Description,
+            Price = productInfo.Price,
+            UnitId = productInfo.UnitId,
+            
+        };
+        //productInfo => Product
         return Ok();
     }
-
+    [Route("viewCategory")]
     public async Task<IActionResult> ViewCategory()
     {
         return Ok();
