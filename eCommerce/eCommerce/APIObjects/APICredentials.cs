@@ -1,6 +1,6 @@
 namespace eCommerce.APIObjects
 {
-    public class Credentials
+    public class APICredentials
     {
         public string? Email { get; set; }
         public string? Password { get; set; }

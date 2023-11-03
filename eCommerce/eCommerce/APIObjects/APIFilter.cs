@@ -1,6 +1,6 @@
 namespace eCommerce.APIObjects;
 
-public class Filter
+public class APIFilter
 {
     
 }
