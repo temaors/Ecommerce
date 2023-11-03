@@ -14,5 +14,10 @@ namespace eCommerce.Database
         public virtual DbSet<Product>? Products { get; set; }
         public virtual DbSet<Category>? Categories { get; set; }
         public virtual DbSet<SubCategory>? SubCategories { get; set; }
+        public virtual DbSet<Sale>? Sales { get; set; }
+        public virtual DbSet<PointOfDelivery> PointOfDeliveries { get; set; }
+        public virtual DbSet<Cart> Carts { get; set; }
+        public virtual DbSet<Seller> Sellers { get; set; }
+        public virtual DbSet<FeedBack> FeedBacks { get; set; }
     }
 }
