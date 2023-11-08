@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Payments" />
+      <Folder Include="QRCodeGenerator" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CodePackage.Money.YooKassa" Version="15.0.5" />
+      <PackageReference Include="CodePackage.YooKassa" Version="14.2.9" />
+    </ItemGroup>
+
+</Project>

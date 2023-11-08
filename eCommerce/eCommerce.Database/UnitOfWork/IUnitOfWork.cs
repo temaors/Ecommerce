@@ -9,5 +9,10 @@ public interface IUnitOfWork : IDisposable
     ProductRepository Products { get; set; }
     CategoryRepository Categories { get; set; }
     SubcategoryRepository Subcategories { get; set; }
+    CartRepository Carts { get; set; }
+    FeedBackRepository FeedBacks { get; set; }
+    SaleRepository Sales { get; set; }
+    PointOfDeliveryRepository DeliveryPoints { get; set; }
+    SellerRepository Sellers { get; set; }
     int Complete();
 }

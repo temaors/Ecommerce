@@ -14,7 +14,7 @@ namespace eCommerce.Database.UnitOfWork
             Categories = new CategoryRepository(_context);
             Subcategories = new SubcategoryRepository(_context);
             Products = new ProductRepository(_context);
-            Cart = new CartRepository(_context);
+            Carts = new CartRepository(_context);
             DeliveryPoints = new PointOfDeliveryRepository(_context);
             Sales = new SaleRepository(_context);
             FeedBacks = new FeedBackRepository(_context);
@@ -23,8 +23,8 @@ namespace eCommerce.Database.UnitOfWork
         public UserRepository Users { get; private set; }
         public CategoryRepository Categories { get; set; }
         public SubcategoryRepository Subcategories { get; set; }
+        public CartRepository Carts { get; set; }
         public ProductRepository Products { get; set; }
-        public CartRepository Cart { get; set; }
         public PointOfDeliveryRepository DeliveryPoints { get; set; }
         public SaleRepository Sales { get; set; }
         public FeedBackRepository FeedBacks { get; set; }
