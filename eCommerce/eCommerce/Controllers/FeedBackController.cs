@@ -5,13 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eCommerce.Controllers;
 
-public class FeedBackController : ControllerBase
+public class FeedBackController : BaseECommerceController
 {
-    private readonly IUnitOfWork _unitOfWork;
-    
-    public FeedBackController(IUnitOfWork unitOfWork)
+    public FeedBackController(IUnitOfWork unitOfWork) : base(unitOfWork)
     {
-        _unitOfWork = unitOfWork;
     }
 
     [HttpPost]

@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Map" />
       <Folder Include="Payments" />
-      <Folder Include="QRCodeGenerator" />
     </ItemGroup>
 
     <ItemGroup>

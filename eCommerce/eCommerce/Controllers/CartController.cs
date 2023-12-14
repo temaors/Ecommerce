@@ -4,15 +4,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eCommerce.Controllers;
 
-public class CartController : ControllerBase
+public class CartController : BaseECommerceController
 {
-    private readonly IUnitOfWork _unitOfWork;
-    
-    public CartController(IUnitOfWork unitOfWork)
+    public CartController(IUnitOfWork unitOfWork) : base(unitOfWork)
     {
-        _unitOfWork = unitOfWork;
     }
-    
+
+    [HttpPatch]
+    public async Task<IActionResult> AddToCart()
+    {
+        return Ok();
+    }
     [HttpPost]
     [Route("addCart")]
     public async Task<IActionResult> CreateCart(int userId) =>
@@ -28,8 +30,9 @@ public class CartController : ControllerBase
 
     [HttpPatch]
     [Route("clearCart")]
-    public async Task<IActionResult> ClearCart(Cart cart)
+    public async Task<IActionResult> ClearCart(int userId)
     {
+        Cart cart = await _unitOfWork.Carts.FindBy(cart => cart.UserId == userId);
         cart.Products = new List<Product>();
         return Ok(_unitOfWork.Carts.Update(cart));
     }

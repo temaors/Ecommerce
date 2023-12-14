@@ -1,6 +1,6 @@
 namespace eCommerce.Validators;
 
-public class ProductValidator
+public class ProductValidator<T> : BaseValidator<T>
 {
     
 }

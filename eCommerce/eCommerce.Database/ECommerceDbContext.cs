@@ -19,5 +19,7 @@ namespace eCommerce.Database
         public virtual DbSet<Cart> Carts { get; set; }
         public virtual DbSet<Seller> Sellers { get; set; }
         public virtual DbSet<FeedBack> FeedBacks { get; set; }
+        public virtual DbSet<Suppliers> Suppliers { get; set; }
+        public virtual DbSet<Supplies> Supplies { get; set; }
     }
 }

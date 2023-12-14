@@ -1,5 +1,6 @@
 using eCommerce.Database.DbEntities;
 using eCommerce.Database.Repositories;
+using eCommerce.MappingProfiles;
 using Microsoft.OpenApi.Models;
 
 namespace eCommerce
@@ -10,6 +11,13 @@ namespace eCommerce
         {
             builder.ConfigureSwagger();
             //builder.ConfigureRepositories();
+            builder.ConfigureMappers();
+        }
+
+        private static void ConfigureMappers(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddAutoMapper(typeof(UserMappingProfile));
+            builder.Services.AddAutoMapper(typeof(ProductMappingProfile));
         }
 
         private static void ConfigureSwagger(this WebApplicationBuilder builder)

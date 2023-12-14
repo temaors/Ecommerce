@@ -76,7 +76,71 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj",
+        "projectName": "eCommerce.Extensions",
+        "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj",
+        "packagesPath": "/Users/temaors/.nuget/packages/",
+        "outputPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/temaors/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "CodePackage.Money.YooKassa": {
+              "target": "Package",
+              "version": "[15.0.5, )"
+            },
+            "CodePackage.YooKassa": {
+              "target": "Package",
+              "version": "[14.2.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -97,6 +161,7 @@
         ],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.310/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -105,6 +170,9 @@
             "projectReferences": {
               "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj": {
                 "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj"
+              },
+              "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj": {
+                "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj"
               }
             }
           }
@@ -119,6 +187,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.12, )"
@@ -163,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
         }
       }
     }

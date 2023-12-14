@@ -2,7 +2,7 @@ using Microsoft.Extensions.Options;
 
 namespace eCommerce.Validators;
 
-public class BaseValidator<T>
+public abstract class BaseValidator<T>
 {
     protected void DoValidate(T obj)
     { }  

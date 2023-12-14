@@ -1,0 +1,26 @@
+@using eCommerce.APIObjects
+@model eCommerce.ViewModels.UserProductViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div style="display: flex">
+    @foreach (APIProductInfo obj in Model.UserProducts)
+    {
+    <a asp-controller="Products" asp-action="ViewProductDetails" asp-route-id="@obj.Id">
+        <div class="product-card">
+            <img src="path/to/product-image.jpg" alt="Product Image">
+            <div class="product-title">@obj.Name</div>
+            <div class="product-price">@obj.Price</div>
+            <div class="">
+                <i class="fa-solid fa-star" style="color: darkorange"></i>@obj.Rating
+            </div>
+            <div>
+                <a class="btn btn-primary">В корзину</a>
+            </div>
+        </div>
+    </a>
+    }
+</div>

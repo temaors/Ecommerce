@@ -1,0 +1,32 @@
+@model APIObjects.APIUser
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Личный кабинет</h2>
+<div style="display: flex">
+    <div>
+        <label>Фамилия: </label>
+        <input/>
+    </div>
+    
+    <div>
+        <label>Имя: </label>
+        
+    </div>
+    <div>
+        <label>Отчество: </label>
+        <input/>
+    </div>
+    <div>
+        <label>Статус: </label>
+        <input/>
+    </div>
+    <div>
+        <label>Email: </label>
+        <text>@Model.Email</text>
+        <input/>
+    </div>
+</div>

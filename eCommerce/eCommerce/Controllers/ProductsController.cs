@@ -1,31 +1,89 @@
+using AutoMapper;
 using eCommerce.APIObjects;
 using eCommerce.Database.DbEntities;
 using eCommerce.Database.UnitOfWork;
+using eCommerce.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eCommerce.Controllers;
 
-public class ProductsController : ControllerBase
+public class ProductsController : BaseECommerceController
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
     
-    public ProductsController(IUnitOfWork unitOfWork)
+    public ProductsController(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork)
     {
-        _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
-
-    [Route("viewProducts")]
+    [Route("")]
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetProducts() =>
-        Ok(_unitOfWork.Products.GetAll());
+    public async Task<IActionResult> GetProducts(int? id)
+    {
+        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
+        ViewBag.Categories = categories;
+        // var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
+        // ViewBag.Categories = categories;
+        if (id == null)
+        {
+            return RedirectToAction("ViewProducts");
+        }
+        List<APIProductInfo> products = new List<APIProductInfo>();
+
+        foreach (var prod in _unitOfWork.Products.GetAll())
+        {
+            products.Add(new APIProductInfo()
+            {
+                Id = prod.Id,
+                Name = prod.Name,
+                Description = prod.Description,
+                Rating = Math.Round(prod.FeedBacks?.Average(p => p.Mark) ??  0.0, 1)
+            });
+        }
+
+        User? dbUser = await _unitOfWork.Users.GetById(id.Value);
+        
+        APIUser apiUser = _mapper.Map<APIUser>(dbUser);
+        UserProductViewModel viewModel = new UserProductViewModel()
+        {
+            UserProducts = products,
+            User = apiUser
+        };
+        ViewBag.Id = dbUser.Id;
+        return View("ViewProducts", viewModel);
+    }
+    
+    public async Task<IActionResult> ViewProducts()
+    {
+        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
+        ViewBag.Categories = categories;
+        // var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
+        // ViewBag.Categories = categories;
+        //
+        List<APIProductInfo> products = new List<APIProductInfo>();
+
+        foreach (var prod in _unitOfWork.Products.GetAll())
+        {
+            products.Add(new APIProductInfo()
+            {
+                Id = prod.Id,
+                Name = prod.Name,
+                Description = prod.Description,
+                Rating = Math.Round(prod.FeedBacks?.Average(p => p.Mark) ??  0.0, 1)
+            });
+        }
+        UserProductViewModel viewModel = new UserProductViewModel()
+        {
+            UserProducts = products
+        };
+        return View("Index", viewModel);
+    }
 
     [Route("addProduct")]
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> CreateProduct(APIProductInfo apiProductInfo)
     {
-        //_unitOfWork.Products.GetAll();
         Product product = new Product()
         {
             Name = apiProductInfo.Name,
@@ -41,10 +99,17 @@ public class ProductsController : ControllerBase
 
     [Route("deleteProduct")]
     [HttpDelete]
-    public async Task<IActionResult> DeleteProduct()
+    public async Task<IActionResult> DeleteProduct(int productId)
     {
+        await _unitOfWork.Products.Delete(productId);
+        await _unitOfWork.Products.Save();
         return Ok();
     }
     
-    
+    public async Task<IActionResult> ViewProductDetails(int id)
+    {
+        Product product = await _unitOfWork.Products.GetById(id);
+        APIProductInfo productResult = _mapper.Map<APIProductInfo>(product);
+        return View("ProductInfo", productResult);
+    }
 }

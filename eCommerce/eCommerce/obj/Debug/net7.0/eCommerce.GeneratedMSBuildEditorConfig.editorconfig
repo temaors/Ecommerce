@@ -16,10 +16,46 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/temaors/Documents/EC/eCommerce/eCommerce
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Authorization/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXphdGlvbi9TaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Pages/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0ZXIuY3NodG1s
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Authorization/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXphdGlvbi9TaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Products/ProductInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvUHJvZHVjdEluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Products/ViewProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvVmlld1Byb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Seller/NewSeller.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VsbGVyL05ld1NlbGxlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Seller/Suppliers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VsbGVyL1N1cHBsaWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Shared/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/User/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

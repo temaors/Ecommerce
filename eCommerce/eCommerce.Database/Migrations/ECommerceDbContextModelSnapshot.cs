@@ -86,7 +86,7 @@ namespace eCommerce.Database.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<double>("Mark")
+                    b.Property<double?>("Mark")
                         .HasColumnType("double precision");
 
                     b.Property<int>("ProductId")
@@ -147,7 +147,10 @@ namespace eCommerce.Database.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.Property<double>("Price")
+                    b.Property<double?>("Price")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("Rating")
                         .HasColumnType("double precision");
 
                     b.Property<int?>("SaleId")
@@ -156,10 +159,10 @@ namespace eCommerce.Database.Migrations
                     b.Property<int?>("SellerId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("SubCategoryId")
+                    b.Property<int?>("SubCategoryId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("UnitId")
+                    b.Property<int?>("UnitId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -204,6 +207,9 @@ namespace eCommerce.Database.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<double>("CashAccount")
+                        .HasColumnType("double precision");
+
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
 
@@ -242,6 +248,9 @@ namespace eCommerce.Database.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Currency")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Email")
                         .HasColumnType("text");
@@ -331,9 +340,7 @@ namespace eCommerce.Database.Migrations
 
                     b.HasOne("eCommerce.Database.DbEntities.SubCategory", "SubCategory")
                         .WithMany("Products")
-                        .HasForeignKey("SubCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubCategoryId");
 
                     b.Navigation("SubCategory");
                 });

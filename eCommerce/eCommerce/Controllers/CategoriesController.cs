@@ -5,13 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eCommerce.Controllers
 {
-    public class CategoriesController : ControllerBase
+    public class CategoriesController : BaseECommerceController
     {
-        private readonly IUnitOfWork _unitOfWork;
     
-        public CategoriesController(IUnitOfWork unitOfWork)
+        public CategoriesController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-            _unitOfWork = unitOfWork;
         }
         
         [Route("viewCategory")]

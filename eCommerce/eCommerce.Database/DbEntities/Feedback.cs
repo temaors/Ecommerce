@@ -8,6 +8,6 @@ namespace eCommerce.Database.DbEntities
         public int ProductId { get; set; }
         public Product Product { get; set; }
         public string? Text { get; set; }
-        public double Mark { get; set; }
+        public double? Mark { get; set; }
     }
 }
