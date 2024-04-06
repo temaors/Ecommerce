@@ -13,6 +13,8 @@ public class UserController : BaseECommerceController
     [Route("account")]
     public async Task<IActionResult> GetAccount(int id)
     {
+        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
+        ViewBag.Categories = categories;
         var user = await _unitOfWork.Users.GetById(id);
         APIUser apiUser = new APIUser
         {

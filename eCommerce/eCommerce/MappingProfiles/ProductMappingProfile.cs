@@ -16,6 +16,7 @@ public class ProductMappingProfile : Profile
             .ForMember(dest => dest.SubcategoryId, opt => opt.MapFrom(src =>src.SubCategoryId))
             .ForMember(dest => dest.UnitId, opt => opt.MapFrom(src =>src.UnitId))
             .ForMember(dest => dest.Rating, opt => opt.MapFrom(src =>src.Rating))
+            .ForMember(dest => dest.Reference, opt => opt.MapFrom(src =>src.Reference))
             .ReverseMap();
     }
 }

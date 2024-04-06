@@ -13,6 +13,8 @@ public class AuthorizationController : BaseECommerceController
     [Route("signIn")]
     public IActionResult SignIn(int? id)
     {
+        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
+        ViewBag.Categories = categories;
         if (id == null)
             return View("SignIn");
         else
@@ -22,9 +24,10 @@ public class AuthorizationController : BaseECommerceController
     [Route("signUp")]
     public IActionResult SignUp()
     {
+        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
+        ViewBag.Categories = categories;
         return View("SignUp");
     }
-
     
     public async Task<IActionResult> LogIn(APICredentials creds)
     {

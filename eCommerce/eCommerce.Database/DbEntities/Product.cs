@@ -6,6 +6,7 @@ namespace eCommerce.Database.DbEntities
         public string? Name { get; set; }
         public string? Description { get; set; }
         public double? Price { get; set; }
+        public string? Reference { get; set; }
         public int? UnitId { get; set; }
         public int? SubCategoryId { get; set; }
         public double? Rating { get; set; }

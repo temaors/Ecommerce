@@ -5,20 +5,23 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-
+<div style="display: flex; margin-left: 50px;">
+    <div><i class="fa-solid fa-filter green-element" style="font-size: 20px"></i></div>
+    <div style="margin-left: 15px"><i class="fa-solid fa-sort green-element" style="font-size: 20px"></i></div>
+</div>
 <div style="display: flex">
     @foreach (APIProductInfo obj in Model.UserProducts)
     {
-    <a asp-controller="Products" asp-action="ViewProductDetails" asp-route-id="@obj.Id">
+    <a style="flex-wrap: wrap;">
         <div class="product-card">
-            <img src="path/to/product-image.jpg" alt="Product Image">
-            <div class="product-title">@obj.Name</div>
-            <div class="product-price">@obj.Price</div>
+            <img src="@obj.Reference" alt="Product Image" style="height: 320px">
+            <div class="product-title" style="margin-top: auto">@obj.Name</div>
+            <div class="product-price" style="margin-top: auto">@obj.Price BYN</div>
             <div class="">
-                <i class="fa-solid fa-star" style="color: darkorange"></i>@obj.Rating
+                <i class="fa-solid fa-star" style="color: darkorange; margin-top: auto"></i>@obj.Rating
             </div>
             <div>
-                <a class="btn btn-primary">В корзину</a>
+                <a class="btn btn-primary" style="margin-top: auto">В корзину</a>
             </div>
         </div>
     </a>

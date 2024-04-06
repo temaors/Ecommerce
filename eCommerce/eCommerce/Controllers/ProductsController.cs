@@ -69,7 +69,9 @@ public class ProductsController : BaseECommerceController
                 Id = prod.Id,
                 Name = prod.Name,
                 Description = prod.Description,
-                Rating = Math.Round(prod.FeedBacks?.Average(p => p.Mark) ??  0.0, 1)
+                Reference = prod.Reference,
+                Price = prod.Price,
+                Rating = prod.Rating
             });
         }
         UserProductViewModel viewModel = new UserProductViewModel()

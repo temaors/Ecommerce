@@ -150,8 +150,12 @@ namespace eCommerce.Database.Migrations
                     b.Property<double?>("Price")
                         .HasColumnType("double precision");
 
-                    b.Property<double>("Rating")
+                    b.Property<double?>("Rating")
                         .HasColumnType("double precision");
+
+                    b.Property<string>("Reference")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int?>("SaleId")
                         .HasColumnType("integer");
@@ -160,6 +164,9 @@ namespace eCommerce.Database.Migrations
                         .HasColumnType("integer");
 
                     b.Property<int?>("SubCategoryId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("SuppliersId")
                         .HasColumnType("integer");
 
                     b.Property<int?>("UnitId")
@@ -174,6 +181,8 @@ namespace eCommerce.Database.Migrations
                     b.HasIndex("SellerId");
 
                     b.HasIndex("SubCategoryId");
+
+                    b.HasIndex("SuppliersId");
 
                     b.ToTable("Products");
                 });
@@ -239,6 +248,44 @@ namespace eCommerce.Database.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("SubCategories");
+                });
+
+            modelBuilder.Entity("eCommerce.Database.DbEntities.Suppliers", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Suppliers");
+                });
+
+            modelBuilder.Entity("eCommerce.Database.DbEntities.Supplies", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("SellerId")
+                        .HasColumnType("integer");
+
+                    b.Property<double>("Sum")
+                        .HasColumnType("double precision");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SellerId");
+
+                    b.ToTable("Supplies");
                 });
 
             modelBuilder.Entity("eCommerce.Database.DbEntities.User", b =>
@@ -342,6 +389,10 @@ namespace eCommerce.Database.Migrations
                         .WithMany("Products")
                         .HasForeignKey("SubCategoryId");
 
+                    b.HasOne("eCommerce.Database.DbEntities.Suppliers", null)
+                        .WithMany("ProductsList")
+                        .HasForeignKey("SuppliersId");
+
                     b.Navigation("SubCategory");
                 });
 
@@ -376,6 +427,13 @@ namespace eCommerce.Database.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("eCommerce.Database.DbEntities.Supplies", b =>
+                {
+                    b.HasOne("eCommerce.Database.DbEntities.Seller", null)
+                        .WithMany("Supplies")
+                        .HasForeignKey("SellerId");
+                });
+
             modelBuilder.Entity("eCommerce.Database.DbEntities.Cart", b =>
                 {
                     b.Navigation("Products");
@@ -399,11 +457,18 @@ namespace eCommerce.Database.Migrations
             modelBuilder.Entity("eCommerce.Database.DbEntities.Seller", b =>
                 {
                     b.Navigation("Products");
+
+                    b.Navigation("Supplies");
                 });
 
             modelBuilder.Entity("eCommerce.Database.DbEntities.SubCategory", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("eCommerce.Database.DbEntities.Suppliers", b =>
+                {
+                    b.Navigation("ProductsList");
                 });
 #pragma warning restore 612, 618
         }

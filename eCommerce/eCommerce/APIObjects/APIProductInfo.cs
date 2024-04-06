@@ -9,5 +9,6 @@ namespace eCommerce.APIObjects
         public double? Price { get; set; }
         public int? UnitId { get; set; }
         public double? Rating { get; set; }
+        public string? Reference { get; set; }
     }
 }
