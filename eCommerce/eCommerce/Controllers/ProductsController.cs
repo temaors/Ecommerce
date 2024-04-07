@@ -15,15 +15,13 @@ public class ProductsController : BaseECommerceController
     {
         _mapper = mapper;
     }
-    [Route("")]
+    [Route("view")]
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetProducts(int? id)
     {
         var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
         ViewBag.Categories = categories;
-        // var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
-        // ViewBag.Categories = categories;
         if (id == null)
         {
             return RedirectToAction("ViewProducts");
@@ -57,9 +55,6 @@ public class ProductsController : BaseECommerceController
     {
         var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
         ViewBag.Categories = categories;
-        // var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
-        // ViewBag.Categories = categories;
-        //
         List<APIProductInfo> products = new List<APIProductInfo>();
 
         foreach (var prod in _unitOfWork.Products.GetAll())

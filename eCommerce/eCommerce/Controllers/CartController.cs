@@ -24,7 +24,7 @@ public class CartController : BaseECommerceController
     }));
 
     [HttpGet]
-    [Route("getCart")]
+    [Route("viewCart")]
     public async Task<IActionResult> GetCart(int userId) => 
         Ok(await _unitOfWork.Carts.FindBy(cart => cart.UserId == userId));
 

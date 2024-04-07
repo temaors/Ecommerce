@@ -8,41 +8,6 @@ namespace eCommerce.Controllers;
 public class AuthorizationController : BaseECommerceController
 {
     public AuthorizationController(IUnitOfWork unitOfWork) : base(unitOfWork)
-    { }
-    
-    [Route("signIn")]
-    public IActionResult SignIn(int? id)
     {
-        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
-        ViewBag.Categories = categories;
-        if (id == null)
-            return View("SignIn");
-        else
-            return RedirectToAction("GetAccount", "User", new {id});
-    }
-
-    [Route("signUp")]
-    public IActionResult SignUp()
-    {
-        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
-        ViewBag.Categories = categories;
-        return View("SignUp");
-    }
-    
-    public async Task<IActionResult> LogIn(APICredentials creds)
-    {
-        User newUser = new User()
-        {
-            Email = creds.Email,
-            Password = creds.Password
-        };
-        var allUsers = _unitOfWork.Users.GetAll();
-        foreach (var us in allUsers)
-        {
-            if(us.Email == creds.Email && us.Password == creds.Password)
-                return RedirectToAction("GetProducts", "Products", new { id = us.Id});
-        }
-
-        return SignIn(null);
     }
 }

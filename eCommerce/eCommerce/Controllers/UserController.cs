@@ -11,11 +11,12 @@ public class UserController : BaseECommerceController
     }
 
     [Route("account")]
-    public async Task<IActionResult> GetAccount(int id)
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(APIUser))]
+    public async Task<IActionResult> GetAccount(int userId)
     {
-        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
-        ViewBag.Categories = categories;
-        var user = await _unitOfWork.Users.GetById(id);
+        var user = await _unitOfWork.Users.GetById(userId);
+        //var address = await _unitOfWork.DeliveryPoints.FindBy(address => address.UserId == userId);
+        //todo create table usersPointOfDeliveries (many to many)
         APIUser apiUser = new APIUser
         {
             FirstName = user.FirstName,
@@ -25,7 +26,8 @@ public class UserController : BaseECommerceController
             Currency = user.Currency,
             Email = user.Email
         };
-        ViewBag.Id = id;
-        return View("Account", apiUser);
+        
+        
+        return Ok(apiUser);
     }
-}
+} 
