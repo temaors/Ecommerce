@@ -1,6 +1,6 @@
 namespace eCommerce.APIObjects;
-
-public class APISeller
+        
+public class ApiSeller
 {
     
 }

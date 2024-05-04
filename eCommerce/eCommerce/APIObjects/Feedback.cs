@@ -1,6 +1,6 @@
 namespace eCommerce.APIObjects;
 
-public class APIFeedback
+public class ApiFeedback
 {
     public int ProductId { get; set; }
     public string? FeedbackText { get; set; }

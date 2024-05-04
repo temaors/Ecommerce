@@ -4,6 +4,6 @@ namespace eCommerce.ViewModels;
 
 public class UserProductViewModel
 {
-    public APIUser? User { get; set; }
-    public List<APIProductInfo>? UserProducts { get; set; }
+    public ApiUser? User { get; set; }
+    public List<ApiProductInfo>? UserProducts { get; set; }
 }

@@ -1,5 +1,3 @@
-using System.Drawing;
-using eCommerce.Database.DbEntities;
 using eCommerce.Database.Repositories;
 
 namespace eCommerce.Database.UnitOfWork
@@ -19,6 +17,7 @@ namespace eCommerce.Database.UnitOfWork
             Sales = new SaleRepository(_context);
             FeedBacks = new FeedBackRepository(_context);
             Sellers = new SellerRepository(_context);
+            UsersAddresses = new UsersAddressesRepository(context);
         }
         public UserRepository Users { get; private set; }
         public CategoryRepository Categories { get; set; }
@@ -29,6 +28,7 @@ namespace eCommerce.Database.UnitOfWork
         public SaleRepository Sales { get; set; }
         public FeedBackRepository FeedBacks { get; set; }
         public SellerRepository Sellers { get; set; }
+        public UsersAddressesRepository UsersAddresses { get; set; }
         
         public int Complete()
         {

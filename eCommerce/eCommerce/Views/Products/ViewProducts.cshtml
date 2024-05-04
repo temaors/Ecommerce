@@ -7,7 +7,7 @@
 }
 
 <div style="display: flex">
-    @foreach (APIProductInfo obj in Model.UserProducts)
+    @foreach (ApiProductInfo obj in Model.UserProducts)
     {
         <a asp-controller="Products" asp-action="ViewProductDetails" asp-route-id="@obj.Id">
             <div class="product-card">

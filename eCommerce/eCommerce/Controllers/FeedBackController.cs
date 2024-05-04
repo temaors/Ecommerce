@@ -5,15 +5,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eCommerce.Controllers;
 
+[Route("feedback")]
 public class FeedBackController : BaseECommerceController
 {
-    public FeedBackController(IUnitOfWork unitOfWork) : base(unitOfWork)
-    {
-    }
+    public FeedBackController(IUnitOfWork unitOfWork, ILogger<FeedBackController> logger) 
+        : base(unitOfWork, logger)
+    { }
 
     [HttpPost]
-    [Route("addFeedback")]
-    public async Task<IActionResult> AddFeedBack(APIFeedback feedback)
+    [Route("create")]
+    public async Task<IActionResult> AddFeedBack(ApiFeedback feedback)
     {
         FeedBack feedBack = new FeedBack()
         {
@@ -26,7 +27,7 @@ public class FeedBackController : BaseECommerceController
     }
 
     [HttpGet]
-    [Route("getFeedbacks")]
+    [Route("get/{productId:int}")]
     public async Task<IActionResult> GetFeedbacksByProductId(int productId) => 
         Ok(await _unitOfWork.FeedBacks.FindBy(feedBack => feedBack.ProductId == productId));
 }

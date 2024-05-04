@@ -1,6 +1,6 @@
 namespace eCommerce.APIObjects;
 
-public class APICategory
+public class ApiCategory
 {
     public string Name { get; set; }
 }

@@ -11,7 +11,8 @@ public class ProductsController : BaseECommerceController
 {
     private readonly IMapper _mapper;
     
-    public ProductsController(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork)
+    public ProductsController(IUnitOfWork unitOfWork, IMapper mapper, ILogger<ProductsController> logger) 
+        : base(unitOfWork, logger)
     {
         _mapper = mapper;
     }
@@ -26,11 +27,11 @@ public class ProductsController : BaseECommerceController
         {
             return RedirectToAction("ViewProducts");
         }
-        List<APIProductInfo> products = new List<APIProductInfo>();
+        List<ApiProductInfo> products = new List<ApiProductInfo>();
 
         foreach (var prod in _unitOfWork.Products.GetAll())
         {
-            products.Add(new APIProductInfo()
+            products.Add(new ApiProductInfo()
             {
                 Id = prod.Id,
                 Name = prod.Name,
@@ -41,7 +42,7 @@ public class ProductsController : BaseECommerceController
 
         User? dbUser = await _unitOfWork.Users.GetById(id.Value);
         
-        APIUser apiUser = _mapper.Map<APIUser>(dbUser);
+        ApiUser apiUser = _mapper.Map<ApiUser>(dbUser);
         UserProductViewModel viewModel = new UserProductViewModel()
         {
             UserProducts = products,
@@ -51,15 +52,16 @@ public class ProductsController : BaseECommerceController
         return View("ViewProducts", viewModel);
     }
     
+    [HttpGet]
     public async Task<IActionResult> ViewProducts()
     {
         var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
         ViewBag.Categories = categories;
-        List<APIProductInfo> products = new List<APIProductInfo>();
+        List<ApiProductInfo> products = new List<ApiProductInfo>();
 
         foreach (var prod in _unitOfWork.Products.GetAll())
         {
-            products.Add(new APIProductInfo()
+            products.Add(new ApiProductInfo()
             {
                 Id = prod.Id,
                 Name = prod.Name,
@@ -79,7 +81,7 @@ public class ProductsController : BaseECommerceController
     [Route("addProduct")]
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> CreateProduct(APIProductInfo apiProductInfo)
+    public async Task<IActionResult> CreateProduct(ApiProductInfo apiProductInfo)
     {
         Product product = new Product()
         {
@@ -103,10 +105,11 @@ public class ProductsController : BaseECommerceController
         return Ok();
     }
     
+    [HttpGet]
     public async Task<IActionResult> ViewProductDetails(int id)
     {
         Product product = await _unitOfWork.Products.GetById(id);
-        APIProductInfo productResult = _mapper.Map<APIProductInfo>(product);
+        ApiProductInfo productResult = _mapper.Map<ApiProductInfo>(product);
         return View("ProductInfo", productResult);
     }
 }

@@ -1,6 +1,6 @@
 namespace eCommerce.APIObjects;
 
-public class APISellersProduct
+public class ApiSellersProduct
 {
     public int SellerId { get; set; }
     public string? Name { get; set; }

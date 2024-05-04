@@ -1,6 +1,6 @@
 namespace eCommerce.APIObjects;
 
-public class APIUser
+public class ApiUser
 {
     public int Id { get; set; }
     public string? FirstName { get; set; }
@@ -10,4 +10,9 @@ public class APIUser
     public string? Password { get; set; }
     public int Type { get; set; }
     public int Currency { get; set; }
+}
+
+public class SignedUserResponse
+{
+    public int Id { get; set; }
 }

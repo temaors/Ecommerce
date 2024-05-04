@@ -7,28 +7,20 @@ namespace eCommerce.Controllers
 {
     public class CategoriesController : BaseECommerceController
     {
-    
-        public CategoriesController(IUnitOfWork unitOfWork) : base(unitOfWork)
-        {
-        }
+        public CategoriesController(IUnitOfWork unitOfWork, ILogger<CategoriesController> logger) 
+            : base(unitOfWork, logger)
+        { }
         
-        [Route("viewCategory")]
+        [Route("category/view")]
         [HttpGet]
         public async Task<IActionResult> GetCategories()
         {
             return Ok(_unitOfWork.Categories.GetAll());
         }
         
-        [Route("viewSubcategory")]
-        [HttpGet]
-        public async Task<IActionResult> GetSubCategories()
-        {
-            return Ok(_unitOfWork.Subcategories.GetAll());
-        }
-        
-        [Route("addCategory")]
+        [Route("category/create")]
         [HttpPost]
-        public async Task<IActionResult> AddCategory(APICategory category)
+        public async Task<IActionResult> AddCategory(ApiCategory category)
         {
             await _unitOfWork.Categories.Create(new Category()
             {
@@ -38,9 +30,22 @@ namespace eCommerce.Controllers
             return Ok();
         }
         
-        [Route("addSubcategory")]
+        [Route("category/remove")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteCategory()
+        {
+            return Ok();
+        }
+        [Route("subcategory/view")]
+        [HttpGet]
+        public async Task<IActionResult> GetSubCategories()
+        {
+            return Ok(_unitOfWork.Subcategories.GetAll());
+        }
+
+        [Route("subcategory/create")]
         [HttpPost]
-        public async Task<IActionResult> AddSubcategory(APISubcategory subcategory)
+        public async Task<IActionResult> AddSubcategory(ApiSubcategory subcategory)
         {
             await _unitOfWork.Subcategories.Create(new SubCategory()
             {
@@ -51,18 +56,11 @@ namespace eCommerce.Controllers
             return Ok();
         }
         
-        [Route("deleteCategory")]
-        [HttpDelete]
-        public async Task<IActionResult> DeleteCategory()
-        {
-            return Ok();
-        }
-        
-        [Route("deleteSubcategory")]
+        [Route("subcategory/remove")]
         [HttpDelete]
         public async Task<IActionResult> DeleteSubcategory()
         {
             return Ok();
         }
     }
-}
+}   
