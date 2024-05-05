@@ -750,7 +750,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.12",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11",
+          "eCommerce.Extensions": "1.0.0"
         },
         "compile": {
           "bin/placeholder/eCommerce.Database.dll": {}

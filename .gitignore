@@ -1,0 +1,15 @@
+
+.DS_Store
+eCommerce/.dockerignore
+eCommerce/.vs/eCommerce/xs/project-cache/eCommerce-Debug.json
+eCommerce/.vs/eCommerce/xs/project-cache/eCommerce.Database-Debug.json
+eCommerce/.vs/eCommerce/xs/project-cache/eCommerce.Extensions-Debug.json
+eCommerce/.vs/eCommerce/xs/project-cache/eCommerce.Tests-Debug.json
+eCommerce/.vs/eCommerce/xs/project-cache/web-Debug.json
+eCommerce/.vs/eCommerce/xs/UserPrefs.xml
+eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.dll
+*.dll
+*.dll
+eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.dll
+*.pdb
+*.cache

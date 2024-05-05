@@ -15,7 +15,7 @@ public class AuthorizationController : BaseECommerceController
     public IActionResult SignIn(ApiCredentials credentials)
     {
         int? id = _unitOfWork.Users.FindBy(user => user.Email.Equals(credentials.Email)).Id;
-        if (id is not null)//todo: why is it always null???
+        if (id is not null)//todo: FindBy works incorrect
             return Ok(new SignedUserResponse
                 {
                     Id = id.Value

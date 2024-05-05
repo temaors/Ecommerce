@@ -26,7 +26,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj": {
+                "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

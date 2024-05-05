@@ -1,3 +1,4 @@
+using eCommerce.Extensions.ExceptionExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -27,22 +28,19 @@ public abstract class Repository<TEntity> : IRepository<TEntity>
         public async Task<TEntity> GetById(int id)
         {
             if (id <= 0)
-            {
-                // throw ExceptionsFactory.InvArgException(
-                //     System.Reflection.MethodBase.GetCurrentMethod().Name,
-                //     @$"Id = {id} is invalid. Id cannot be less than 1");
-            }
+                throw ExceptionsFactory.InvArgException(
+                    System.Reflection.MethodBase.GetCurrentMethod()?.Name,
+                    @$"Id = {id} is invalid. Id cannot be less than 1");
             
             TEntity objectFromDB = await _set.FindAsync(id);
 
             if (objectFromDB is null)
             {
-
-                // throw ExceptionsFactory.DbObjectIsNullException(
-                //     System.Reflection.MethodBase.GetCurrentMethod().Name,
-                //     @$"Object by id = {id} that you try to retrieve from 
-                //     {GetType().Name} repository is null"
-                //     );
+                throw ExceptionsFactory.DbObjectIsNullException(
+                    System.Reflection.MethodBase.GetCurrentMethod().Name,
+                    @$"Object by id = {id} that you try to retrieve from 
+                    {GetType().Name} repository is null"
+                    );
             }
             return objectFromDB;
         }

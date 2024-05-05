@@ -2,6 +2,7 @@ namespace eCommerce.APIObjects
 {
     public class ApiCredentials
     {
+        public ApiCredentials(){}
         public ApiCredentials(string email, string password, string repeatedPassword)
         {
             Email = email;
