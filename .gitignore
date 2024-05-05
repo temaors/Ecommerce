@@ -13,3 +13,8 @@ eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.dll
 eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.dll
 *.pdb
 *.cache
+*.vs
+bin
+obj
+wwwroot
+web
