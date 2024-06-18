@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Extensions", "eCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Tests", "eCommerce.Tests\eCommerce.Tests.csproj", "{AFCB86A9-C13B-4429-B32E-66B93DA07124}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Infrastructure", "eCommerce.Infrastructure\eCommerce.Infrastructure.csproj", "{00B7ED94-7573-4178-BF92-D247D24DA0F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +33,9 @@ Global
 		{AFCB86A9-C13B-4429-B32E-66B93DA07124}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFCB86A9-C13B-4429-B32E-66B93DA07124}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFCB86A9-C13B-4429-B32E-66B93DA07124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B7ED94-7573-4178-BF92-D247D24DA0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B7ED94-7573-4178-BF92-D247D24DA0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B7ED94-7573-4178-BF92-D247D24DA0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B7ED94-7573-4178-BF92-D247D24DA0F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

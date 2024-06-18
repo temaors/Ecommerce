@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eCommerce.Controllers;
 
+[Produces("application/json")]
+[ApiController]
 public class BaseECommerceController : Controller
 {
     protected readonly IUnitOfWork _unitOfWork;
@@ -11,7 +13,5 @@ public class BaseECommerceController : Controller
     {
         _unitOfWork = unitOfWork;
         this.logger = logger;
-        var categories = _unitOfWork.Categories.GetAll().Select(c => c.Name).ToList();
-        ViewBag.Categories = categories;
     }
 }

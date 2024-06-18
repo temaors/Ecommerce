@@ -27,7 +27,7 @@ public class FeedBackController : BaseECommerceController
     }
 
     [HttpGet]
-    [Route("get/{productId:int}")]
+    [Route("get")]
     public async Task<IActionResult> GetFeedbacksByProductId(int productId) => 
         Ok(await _unitOfWork.FeedBacks.FindBy(feedBack => feedBack.ProductId == productId));
 }

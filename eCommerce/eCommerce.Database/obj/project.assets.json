@@ -633,6 +633,19 @@
         "runtime": {
           "bin/placeholder/eCommerce.Extensions.dll": {}
         }
+      },
+      "eCommerce.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "eCommerce.Extensions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/eCommerce.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/eCommerce.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1504,6 +1517,11 @@
       "type": "project",
       "path": "../eCommerce.Extensions/eCommerce.Extensions.csproj",
       "msbuildProject": "../eCommerce.Extensions/eCommerce.Extensions.csproj"
+    },
+    "eCommerce.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../eCommerce.Infrastructure/eCommerce.Infrastructure.csproj",
+      "msbuildProject": "../eCommerce.Infrastructure/eCommerce.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1512,7 +1530,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.12",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.11",
-      "eCommerce.Extensions >= 1.0.0"
+      "eCommerce.Extensions >= 1.0.0",
+      "eCommerce.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1543,6 +1562,9 @@
           "projectReferences": {
             "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj": {
               "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj"
+            },
+            "/Users/temaors/Documents/EC/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj": {
+              "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj"
             }
           }
         }
@@ -1551,6 +1573,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1594,7 +1621,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/RuntimeIdentifierGraph.json"
       }
     }
   }

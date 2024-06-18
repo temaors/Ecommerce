@@ -10,9 +10,11 @@ public interface IUnitOfWork : IDisposable
     CategoryRepository Categories { get; set; }
     SubcategoryRepository Subcategories { get; set; }
     CartRepository Carts { get; set; }
+    CartElementRepository CartElements { get; set; } 
     FeedBackRepository FeedBacks { get; set; }
     SaleRepository Sales { get; set; }
     PointOfDeliveryRepository DeliveryPoints { get; set; }
     SellerRepository Sellers { get; set; }
+    UserFavouritesRepository UserFavourites { get; set; }
     int Complete();
 }

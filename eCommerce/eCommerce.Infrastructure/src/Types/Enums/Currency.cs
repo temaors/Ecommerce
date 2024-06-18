@@ -1,6 +1,7 @@
+
 using eCommerce.Extensions.EnumExtensions;
 
-namespace eCommerce.APIEnums;
+namespace eCommerce.Infrastructure.Types.Enums;
 
 public enum Currency
 {

@@ -405,7 +405,9 @@
       "eCommerce.Database/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.12",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11",
+          "eCommerce.Extensions": "1.0.0",
+          "eCommerce.Infrastructure": "1.0.0"
         },
         "runtime": {
           "eCommerce.Database.dll": {}
@@ -418,6 +420,14 @@
         },
         "runtime": {
           "eCommerce.Extensions.dll": {}
+        }
+      },
+      "eCommerce.Infrastructure/1.0.0": {
+        "dependencies": {
+          "eCommerce.Extensions": "1.0.0"
+        },
+        "runtime": {
+          "eCommerce.Infrastructure.dll": {}
         }
       }
     }
@@ -756,6 +766,11 @@
       "sha512": ""
     },
     "eCommerce.Extensions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "eCommerce.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

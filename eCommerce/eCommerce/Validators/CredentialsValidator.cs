@@ -7,10 +7,11 @@ namespace eCommerce.Validators
     {
         private readonly Regex _passwordRegex = new("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$");
         private readonly Regex _emailRegex = new("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$");
-        public bool IsValid(ApiCredentials apiCredentials)
+        public bool IsCredintialsValid(ApiCredentials credentials)
         {
-            if (!EnsureNotNull(apiCredentials)) return false;
-            return ValidateLogin(apiCredentials.Email) && ValidatePassword(apiCredentials.Password);
+            if (!EnsureNotNull(credentials) || !credentials.Password.Equals(credentials.RepeatedPassword)) return false;
+            //return ValidateLogin(credentials.Email) && ValidatePassword(credentials.Password);
+            return ValidateLogin(credentials.Email);
         }
 
         private bool EnsureNotNull(ApiCredentials apiCredentials) => 

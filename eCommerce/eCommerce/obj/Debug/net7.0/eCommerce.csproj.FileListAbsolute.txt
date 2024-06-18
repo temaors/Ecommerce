@@ -26,7 +26,6 @@
 /Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/staticwebassets.build.json
 /Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/staticwebassets.development.json
 /Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/scopedcss/bundle/eCommerce.styles.css
-/Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/eCommerce.csproj.CopyComplete
 /Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/eCommerce.dll
 /Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/refint/eCommerce.dll
 /Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/eCommerce.pdb
@@ -59,3 +58,7 @@
 /Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/eCommerce.staticwebassets.runtime.json
 /Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/AutoMapper.dll
 /Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/eCommerce.Infrastructure.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce/bin/Debug/net7.0/eCommerce.Infrastructure.pdb
+/Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/eCommerce.sourcelink.json
+/Users/temaors/Documents/EC/eCommerce/eCommerce/obj/Debug/net7.0/eCommerce.csproj.Up2Date

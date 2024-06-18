@@ -1,4 +1,4 @@
-namespace eCommerce.APIEnums;
+namespace eCommerce.Infrastructure.Types.Enums;
 
 public enum Units
 {

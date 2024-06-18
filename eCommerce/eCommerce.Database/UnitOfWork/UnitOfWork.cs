@@ -1,23 +1,26 @@
+using eCommerce.Database.DbEntities;
 using eCommerce.Database.Repositories;
 
 namespace eCommerce.Database.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly ECommerceDbContext _context;
+        public readonly ECommerceDbContext _context;
         public UnitOfWork(ECommerceDbContext context)
         {
             _context = context;
-            Users = new UserRepository(_context);
-            Categories = new CategoryRepository(_context);
-            Subcategories = new SubcategoryRepository(_context);
-            Products = new ProductRepository(_context);
-            Carts = new CartRepository(_context);
-            DeliveryPoints = new PointOfDeliveryRepository(_context);
-            Sales = new SaleRepository(_context);
-            FeedBacks = new FeedBackRepository(_context);
-            Sellers = new SellerRepository(_context);
-            UsersAddresses = new UsersAddressesRepository(context);
+            Users = new(_context);
+            Categories = new(_context);
+            Subcategories = new(_context);
+            Products = new(_context);
+            Carts = new(_context);
+            DeliveryPoints = new(_context);
+            Sales = new(_context);
+            FeedBacks = new(_context);
+            Sellers = new(_context);
+            UsersAddresses = new(_context);
+            CartElements = new(_context);
+            UserFavourites = new(_context);
         }
         public UserRepository Users { get; private set; }
         public CategoryRepository Categories { get; set; }
@@ -29,6 +32,8 @@ namespace eCommerce.Database.UnitOfWork
         public FeedBackRepository FeedBacks { get; set; }
         public SellerRepository Sellers { get; set; }
         public UsersAddressesRepository UsersAddresses { get; set; }
+        public CartElementRepository CartElements { get; set; }
+        public UserFavouritesRepository UserFavourites { get; set; }
         
         public int Complete()
         {

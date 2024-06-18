@@ -36,6 +36,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="APIEnums" />
       <Folder Include="Views\Cart" />
       <Folder Include="wwwroot\js" />
       <Folder Include="wwwroot\lib" />

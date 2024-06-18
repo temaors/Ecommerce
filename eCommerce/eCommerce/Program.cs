@@ -11,17 +11,11 @@ builder.Services.AddCors();
 
 builder.Services.AddDbContext<ECommerceDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
-builder.Services.AddTransient<IRepository<User>, UserRepository>();
-builder.Services.AddTransient<IRepository<Product>, ProductRepository>();
-builder.Services.AddTransient<IRepository<Category>, CategoryRepository>();
-builder.Services.AddTransient<IRepository<SubCategory>, SubcategoryRepository>();
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.ConfigureServices();
-
 
 var app = builder.Build();
 

@@ -13,7 +13,7 @@ namespace eCommerce.Database.Migrations
 {
     [DbContext(typeof(ECommerceDbContext))]
     [Migration("20231214223145_wegdfsg")]
-    partial class wegdfsg
+    partial class TestMigration2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

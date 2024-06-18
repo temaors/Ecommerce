@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace eCommerce.Database.Migrations
 {
     /// <inheritdoc />
-    public partial class asfdsadf : Migration
+    public partial class TestMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

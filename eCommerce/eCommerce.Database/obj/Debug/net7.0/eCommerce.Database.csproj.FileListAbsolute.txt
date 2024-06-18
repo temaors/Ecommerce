@@ -12,3 +12,9 @@
 /Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.pdb
 /Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.genruntimeconfig.cache
 /Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/ref/eCommerce.Database.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Extensions.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Extensions.pdb
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Infrastructure.dll
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Infrastructure.pdb
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerce.Database.sourcelink.json
+/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/Debug/net7.0/eCommerc.94074D4B.Up2Date

@@ -13,7 +13,7 @@ namespace eCommerce.Database.Migrations
 {
     [DbContext(typeof(ECommerceDbContext))]
     [Migration("20231214220734_asfdsadf")]
-    partial class asfdsadf
+    partial class TestMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

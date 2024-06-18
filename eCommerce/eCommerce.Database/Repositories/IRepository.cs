@@ -12,9 +12,8 @@ namespace eCommerce.Database.Repositories
         Task<TEntity> Create(TEntity entity);
 
         TEntity Update(TEntity entity);
+        Task Save();
 
         Task Delete(int id);
-
-        Task Save();
     }
 }

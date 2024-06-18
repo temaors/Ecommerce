@@ -5,7 +5,7 @@
 namespace eCommerce.Database.Migrations
 {
     /// <inheritdoc />
-    public partial class wegdfsg : Migration
+    public partial class TestMigration2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

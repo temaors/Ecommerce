@@ -21,5 +21,8 @@ namespace eCommerce.Database
         public virtual DbSet<Suppliers>? Suppliers { get; set; }
         public virtual DbSet<Supplies>? Supplies { get; set; }
         public virtual DbSet<UsersAddresses>? UsersAddresses { get; set; }
+        public virtual DbSet<UsersFavourites>? UsersFavourites { get; set; }
+        public virtual DbSet<Stock>? Stocks { get; set; }
+        public virtual DbSet<Address>? Addresses { get; set; }
     }
 }

@@ -7,7 +7,14 @@ namespace eCommerce.Database.DbEntities
         [Key]
         public int Id { get; set; }
         public int UserId { get; set; }
-        public User User { get; set; }
-        public List<Product> Products { get; set; }
+        public virtual List<CartElement>? Products { get; set; }
+    }
+
+    public class CartElement
+    {
+        [Key]
+        public int Id { get; set; }
+        public virtual Product Product { get; set; }
+        public int Count { get; set; }
     }
 }
