@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {
+    "net8.0": {
       "CodePackage.Cfgs/15.0.5": {
         "type": "package",
         "dependencies": {
@@ -872,36 +872,38 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0": [
+    "net8.0": [
       "CodePackage.Money.YooKassa >= 15.0.5",
       "CodePackage.YooKassa >= 14.2.9"
     ]
   },
   "packageFolders": {
-    "/Users/temaors/.nuget/packages/": {}
+    "C:\\Users\\ilyai\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj",
+      "projectUniqueName": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj",
       "projectName": "eCommerce.Extensions",
-      "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj",
-      "packagesPath": "/Users/temaors/.nuget/packages/",
-      "outputPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/obj/",
+      "projectPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj",
+      "packagesPath": "C:\\Users\\ilyai\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/temaors/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ilyai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -917,8 +919,8 @@
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
           "CodePackage.Money.YooKassa": {
             "target": "Package",
@@ -945,7 +947,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

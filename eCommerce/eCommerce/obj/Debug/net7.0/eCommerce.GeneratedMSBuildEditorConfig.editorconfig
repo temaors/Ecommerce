@@ -9,55 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = eCommerce
 build_property.RootNamespace = eCommerce
-build_property.ProjectDir = /Users/temaors/Documents/EC/eCommerce/eCommerce/
+build_property.ProjectDir = C:\Users\ilyai\source\repos\eCommerce\eCommerce\eCommerce\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/temaors/Documents/EC/eCommerce/eCommerce
+build_property.MSBuildProjectDirectory = C:\Users\ilyai\source\repos\eCommerce\eCommerce\eCommerce
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Authorization/SignIn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXphdGlvbi9TaWduSW4uY3NodG1s
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Authorization/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXphdGlvblxTaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Authorization/SignUp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yaXphdGlvbi9TaWduVXAuY3NodG1s
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Authorization/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXphdGlvblxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Products/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvSW5kZXguY3NodG1s
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Products/ProductInfo.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvUHJvZHVjdEluZm8uY3NodG1s
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Products/ProductInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcUHJvZHVjdEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Products/ViewProducts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvVmlld1Byb2R1Y3RzLmNzaHRtbA==
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Products/ViewProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcVmlld1Byb2R1Y3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Seller/NewSeller.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VsbGVyL05ld1NlbGxlci5jc2h0bWw=
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Seller/NewSeller.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXE5ld1NlbGxlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Seller/Suppliers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VsbGVyL1N1cHBsaWVycy5jc2h0bWw=
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Seller/Suppliers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXFN1cHBsaWVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/Shared/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WaWV3U3RhcnQuY3NodG1s
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/Shared/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/User/Account.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BY2NvdW50LmNzaHRtbA==
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/User/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/temaors/Documents/EC/eCommerce/eCommerce/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/ilyai/source/repos/eCommerce/eCommerce/eCommerce/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

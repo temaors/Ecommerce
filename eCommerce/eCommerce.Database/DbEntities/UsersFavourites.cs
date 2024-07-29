@@ -1,5 +1,6 @@
 namespace eCommerce.Database.DbEntities;
 using System.ComponentModel.DataAnnotations;
+
 public class UsersFavourites
 {
     [Key]

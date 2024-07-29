@@ -1,8 +1,5 @@
 using eCommerce;
 using eCommerce.Database;
-using eCommerce.Database.DbEntities;
-using eCommerce.Database.Repositories;
-using eCommerce.Database.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,7 +29,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-// app.UseStaticFiles();
 app.UseAuthorization();
 app.UseStaticFiles();
 app.MapDefaultControllerRoute();

@@ -1,37 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj": {}
+    "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Database\\eCommerce.Database.csproj": {}
   },
   "projects": {
-    "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj": {
+    "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Database\\eCommerce.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj",
+        "projectUniqueName": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Database\\eCommerce.Database.csproj",
         "projectName": "eCommerce.Database",
-        "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/eCommerce.Database.csproj",
-        "packagesPath": "/Users/temaors/.nuget/packages/",
-        "outputPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Database/obj/",
+        "projectPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Database\\eCommerce.Database.csproj",
+        "packagesPath": "C:\\Users\\ilyai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/temaors/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ilyai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj": {
-                "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj"
+              "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj": {
+                "projectPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj"
               },
-              "/Users/temaors/Documents/EC/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj": {
-                "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj"
+              "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj"
               }
             }
           }
@@ -48,8 +50,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -88,32 +90,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj": {
+    "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj",
+        "projectUniqueName": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj",
         "projectName": "eCommerce.Extensions",
-        "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj",
-        "packagesPath": "/Users/temaors/.nuget/packages/",
-        "outputPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/obj/",
+        "projectPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj",
+        "packagesPath": "C:\\Users\\ilyai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/temaors/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ilyai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -129,8 +133,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "CodePackage.Money.YooKassa": {
               "target": "Package",
@@ -157,35 +161,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/temaors/Documents/EC/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj": {
+    "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj",
         "projectName": "eCommerce.Infrastructure",
-        "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj",
-        "packagesPath": "/Users/temaors/.nuget/packages/",
-        "outputPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Infrastructure/obj/",
+        "projectPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ilyai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/temaors/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ilyai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj": {
-                "projectPath": "/Users/temaors/Documents/EC/eCommerce/eCommerce.Extensions/eCommerce.Extensions.csproj"
+              "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj": {
+                "projectPath": "C:\\Users\\ilyai\\source\\repos\\eCommerce\\eCommerce\\eCommerce.Extensions\\eCommerce.Extensions.csproj"
               }
             }
           }
@@ -202,8 +208,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -220,7 +226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
