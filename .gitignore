@@ -13,7 +13,9 @@ eCommerce/eCommerce.Database/bin/Debug/net7.0/eCommerce.Database.dll
 *.pdb
 *.cache
 *.vs
-bin
-obj
+*bin
+*obj
 wwwroot
 web
+*.csproj.user
+appsettings*
